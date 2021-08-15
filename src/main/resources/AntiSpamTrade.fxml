@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="179.0" prefWidth="172.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TradeBlocker">
+   <children>
+      <ToggleButton fx:id="toggleBtn" layoutX="37.0" layoutY="103.0" mnemonicParsing="false" onAction="#changeState" prefHeight="29.0" prefWidth="92.0" text="Toggle" textAlignment="CENTER" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0">
+         <font>
+            <Font name="Agency FB" size="19.0" />
+         </font></ToggleButton>
+      <Label fx:id="stateLbl" layoutX="25.0" layoutY="23.0" prefHeight="51.0" prefWidth="123.0" style="-fx-background-color: #FF8080;" text="TradeBlocker is OFF" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="Agency FB" size="19.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="alwaysTopChk" layoutX="30.0" layoutY="148.0" mnemonicParsing="false" onAction="#changeAlwaysOnTop" text="Always on top" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <Label fx:id="totalBlockedLbl" contentDisplay="CENTER" layoutX="14.0" layoutY="67.0" prefHeight="23.0" prefWidth="157.0" text="Total trades blocked: 0">
+         <font>
+            <Font name="Agency FB" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

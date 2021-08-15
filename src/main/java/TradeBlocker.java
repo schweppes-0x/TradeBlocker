@@ -60,12 +60,6 @@ public class TradeBlocker extends ExtensionForm {
     @Override
     protected void initExtension() {
         packetInfoSupport = new PacketInfoSupport(this);
-        //TODO Intercept the TradeOffer packet and block/deblock m
-
-        packetInfoSupport.intercept(HMessage.Direction.TOCLIENT, "TradingOpen", hMessage -> {
-
-        });
-
         packetInfoSupport.intercept(HMessage.Direction.TOCLIENT, "TradingOpen", this::onIncomingTrade);
     }
 
@@ -83,13 +77,13 @@ public class TradeBlocker extends ExtensionForm {
     public void changeState(ActionEvent actionEvent) {
         if(toggleBtn.isSelected()){
             //is turned on
-            //TODO implement turned on behavior
+
             stateLbl.setBackground(new Background(new BackgroundFill(greenColor, CornerRadii.EMPTY, Insets.EMPTY)));
             stateLbl.textProperty().setValue("TradeBlocker is ON");
 
         }else {
             //is turned off
-            //TODO implement turned off behavior
+
             stateLbl.setBackground(new Background(new BackgroundFill(redColor, CornerRadii.EMPTY, Insets.EMPTY)));
             stateLbl.textProperty().setValue("TradeBlocker is OFF");
 

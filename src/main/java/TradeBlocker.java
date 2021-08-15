@@ -9,6 +9,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -19,6 +20,8 @@ import gearth.extensions.ExtensionFormLauncher;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
+import java.util.Objects;
 
 
 @ExtensionInfo(
@@ -52,7 +55,7 @@ public class TradeBlocker extends ExtensionForm {
 
         stage.setTitle("My Extension");
         stage.setScene(new Scene(root));
-
+        stage.getIcons().add(new Image(Objects.requireNonNull(this.getClass().getResource("schweppes.png")).openStream()));
         stage.setResizable(false);
         return loader.getController();
     }
